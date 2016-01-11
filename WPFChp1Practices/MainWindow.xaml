@@ -1,0 +1,54 @@
+﻿<Window x:Class="WPFChp1Practices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFChp1Practices"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="518.519" Width="428.704" MinWidth="380" MinHeight="300" Background="{StaticResource ButtonBackgroundBrush}">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <ToolBar HorizontalContentAlignment="Stretch" Background="{StaticResource ButtonBackgroundBrush}" Height="70" Name="Toolbar">
+            <ToolBar.Resources>
+                <Style TargetType="{x:Type ToolBarPanel}">
+                    <Setter Property="Orientation" Value="Vertical"/>
+                </Style>
+            </ToolBar.Resources>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+          
+                <TextBox Grid.Column="0"></TextBox>
+                <Button Name="buttonPlus" Grid.Column="1">+</Button>
+                <Button Name="buttonMinus" Grid.Column="2">-</Button>
+                <Button Name="buttonMultiply" Grid.Column="3">x</Button>
+                <Button Name="buttonDivide" Grid.Column="4">/</Button>
+            </Grid>
+            
+        </ToolBar>
+        <UniformGrid Columns="3" Grid.Row="1">
+            <Button Name="button1">1</Button>
+            <Button Name="button2">2</Button>
+            <Button Name="button3">3</Button>
+            <Button Name="button4">4</Button>
+            <Button Name="button5">5</Button>
+            <Button Name="button6">6</Button>
+            <Button Name="button7">7</Button>
+            <Button Name="button8">8</Button>
+            <Button Name="button9">9</Button>
+            <Button Name="button0">0</Button>
+            <Button Name="buttonCE">CE</Button>
+         </UniformGrid>
+       
+    </Grid>
+</Window>
